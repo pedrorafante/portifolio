@@ -1,3 +1,5 @@
+/*===== GERAL ===============================================*/
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +12,7 @@
     --hue: 205;
     --primary-color: hsl(var(--hue), 92%, 43%);
     --primary-hover: hsl(var(--hue), 92%, 33%);
+
     --secundary-color: rgb(229, 229, 229);
     --third-color: hwb(0 48% 52% / 0.356);
     --bg-color: rgb(241, 241, 241);
@@ -40,6 +43,16 @@ body {
     overflow: overlay;
 
     background-color: var(--bg-color);
+}
+
+body.light-mode {
+    --secundary-color: rgb(229, 229, 229);
+    --third-color: hwb(0 48% 52% / 0.356);
+    --bg-color: rgb(241, 241, 241);
+
+    --headline: hsl(0, 0%, 0%);
+    --paragraph: rgb(32, 32, 32);
+    --paragraph-2: hsl(calc(var(--hue) + 10), 14%, 3%);
 }
 
 body.dark-mode {
@@ -202,7 +215,7 @@ body .social-links li:nth-child(1) svg:hover path {
 
 body .social-links li:nth-child(2) svg:hover path:nth-child(2),
 body nav#navigation .social-links li:nth-child(2) svg:hover path:nth-child(2) {
-    fill: #000;
+    fill: #fff;
 }
 
 body.light-mode .social-links li:nth-child(2) svg:hover path:nth-child(2),
@@ -882,20 +895,20 @@ body.light-mode #home img#notebook-2-white {
 }
 
 #contact .col-b img {
-    width: 13rem;
-    animation: flutuar 2.5s infinite backwards;
+    width: 40rem;
+    /* animation: flutuar 2.5s infinite backwards; */
     filter: brightness(1.2);
 }
 
 #contact .col-b::after {
-    content: "";
-    display: block;
+    /* content: ""; */
+    /* display: block;
 
     width: 13rem;
     height: 5rem;
 
     background-color: black;
-    border-radius: 100%;
+    border-radius: 100%; */
 }
 
 body.light-mode #contact .col-b::after {
